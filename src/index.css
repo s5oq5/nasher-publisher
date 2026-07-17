@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #f9f9fa;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+  }
+}
+
+/* Icon font tuning */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Paper textures */
+.paper-grain {
+  position: relative;
+}
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+}
+.paper-texture {
+  background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+  opacity: 0.03;
+  pointer-events: none;
+}
+
+/* Surfaces & lines */
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+}
+.editorial-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #71787b 50%, transparent);
+}
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, #00252e 10%, #00252e 90%, transparent);
+}
+.paper-shadow {
+  box-shadow: 0 4px 20px -2px rgba(0, 37, 46, 0.08);
+}
+.paper-card {
+  background: #ffffff;
+  box-shadow: 0 4px 20px -5px rgba(0, 37, 46, 0.05);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.paper-card:hover {
+  transform: translateY(-8px);
+}
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Scroll reveal (services) */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bookstore hover quick-add */
+.book-card:hover .quick-add {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #00252e;
+  border-radius: 10px;
+}
+
+/* Partners logo marquee (right-to-left flow) */
+.marquee-track {
+  animation: marquee-scroll 32s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}

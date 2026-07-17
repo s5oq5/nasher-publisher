@@ -1,0 +1,61 @@
+const board = [
+  {
+    slug: "prince-badr-bin-abdullah",
+    nameAr: "سمو الأمير بدر بن عبدالله بن فرحان آل سعود وزير الثقافة",
+    nameEn: "HH Prince Badr bin Abdullah bin Farhan Al Saud, Minister of Culture",
+    titleAr: "رئيس مجلس الإدارة",
+    titleEn: "Chairman of the Board",
+    photo: "/board/prince-badr-bin-abdullah.jpg",
+    featured: true,
+  },
+  {
+    slug: "hamed-mohammed-fayez",
+    nameAr: "معالي نائب وزير الثقافة أ.حامد محمد فايز",
+    nameEn: "HE Hamed Mohammed Fayez, Vice Minister of Culture",
+    titleAr: "نائب رئيس مجلس الإدارة",
+    titleEn: "Vice Chairman of the Board",
+    photo: "/board/hamed-mohammed-fayez.jpg",
+  },
+  {
+    slug: "abdulaziz-al-subail",
+    nameAr: "د. عبدالعزيز محمد السبيل",
+    nameEn: "Dr. Abdulaziz Mohammed Al-Subail",
+    titleAr: "عضو مجلس الإدارة",
+    titleEn: "Board Member",
+    photo: "/board/abdulaziz-al-subail.jpg",
+  },
+  {
+    slug: "jomana-al-rashed",
+    nameAr: "أ. جمانا راشد الراشد",
+    nameEn: "Ms. Jomana Rashed Al-Rashed",
+    titleAr: "عضو مجلس الإدارة",
+    titleEn: "Board Member",
+    photo: "/board/jomana-al-rashed.jpg",
+  },
+  {
+    slug: "mohammed-bin-dail",
+    nameAr: "د. محمد عبدالرحمن بن دايل",
+    nameEn: "Dr. Mohammed Abdulrahman bin Dail",
+    titleAr: "عضو مجلس الإدارة",
+    titleEn: "Board Member",
+    photo: "/board/mohammed-bin-dail.jpg",
+  },
+  {
+    slug: "mohammed-al-ghamdi",
+    nameAr: "د. محمد سعيد الغامدي",
+    nameEn: "Dr. Mohammed Saeed Al-Ghamdi",
+    titleAr: "عضو مجلس الإدارة",
+    titleEn: "Board Member",
+    photo: "/board/mohammed-al-ghamdi.jpg",
+  },
+  {
+    slug: "mohammed-alwan",
+    nameAr: "د. محمد حسن علوان",
+    nameEn: "Dr. Mohammed Hasan Alwan",
+    titleAr: "عضو مجلس الإدارة",
+    titleEn: "Board Member",
+    photo: "/board/mohammed-alwan.jpg",
+  },
+];
+
+export default board;

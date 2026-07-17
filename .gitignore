@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+.vite
+.DS_Store
+npm-debug.log*
+public/hero-video.mp4
+src/videos/1-15Sec-Edit.mp4
