@@ -4,10 +4,10 @@ export default function MobileMenuButton({ s, active }) {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { key: "store", href: "/shop", label: s.navStore },
-    { key: "editions", href: "/store", label: s.navEditions },
-    { key: "services", href: "/services", label: s.navServices },
     { key: "about", href: "/about", label: s.navAbout },
+    { key: "services", href: "/services", label: s.navServices },
+    { key: "editions", href: "/store", label: s.navEditions },
+    { key: "store", href: "/shop", label: s.navStore },
   ];
 
   return (
