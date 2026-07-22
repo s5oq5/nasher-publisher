@@ -61,7 +61,7 @@ export default function Shop() {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {books.map((book) => (
-      <a key={book.slug} href="/book" className="group cursor-pointer block">
+      <a key={book.slug} href={`/book/${book.slug}`} className="group cursor-pointer block">
       <div className="aspect-[2/3] bg-white paper-shadow rounded-lg overflow-hidden mb-4 transition-transform group-hover:-translate-y-2">
       <img className="w-full h-full object-cover" src={book.cover} alt={lang === "ar" ? book.nameAr : book.nameEn} />
       </div>
