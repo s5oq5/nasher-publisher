@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import SocialLinks from "../components/SocialLinks";
+import MobileMenuButton from "../components/MobileMenuButton";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const partnerLogos = [
@@ -130,7 +131,7 @@ export default function Home() {
     <div className="bg-background text-on-surface font-body-md overflow-x-hidden paper-grain">
 
       {/* Top Navigation Bar */}
-      <nav className="docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 shadow-sm">
+      <nav className="docked full-width top-0 sticky z-50 bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 shadow-sm relative">
       <div className="flex flex-row-reverse justify-between items-center w-full px-6 md:px-10 py-4">
       {/* Brand Logo */}
       <a className="flex items-center order-last" href="/">
@@ -138,6 +139,7 @@ export default function Home() {
                   </a>
       {/* Trailing Actions */}
       <div className="flex items-center gap-6">
+      <MobileMenuButton s={s} />
       <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>

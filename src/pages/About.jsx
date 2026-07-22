@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import SocialLinks from "../components/SocialLinks";
+import MobileMenuButton from "../components/MobileMenuButton";
 import { useLanguage } from "../i18n/LanguageContext";
 
 const T = {
@@ -81,10 +82,11 @@ export default function About() {
   return (
     <div className="font-body-md text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 
-      <nav className="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
+      <nav className="bg-surface/90 dark:bg-surface-dim/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm relative">
       <div className="flex flex-row-reverse justify-between items-center w-full px-6 md:px-10 py-4">
       <a className="flex items-center order-last" href="/"><img src="/nasher-logo.png" alt="ناشر" className="h-12 w-auto rounded-md" /></a>
       <div className="flex items-center gap-6">
+      <MobileMenuButton s={s} active="about" />
       <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import SocialLinks from "../components/SocialLinks";
+import MobileMenuButton from "../components/MobileMenuButton";
 import { useLanguage } from "../i18n/LanguageContext";
 import books from "../data/books";
 
@@ -65,9 +66,10 @@ export default function BookDetail() {
     <div className="text-on-surface">
 
       {/* Top Navigation Bar */}
-      <nav className="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
+      <nav className="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm relative">
       <div className="flex flex-row-reverse justify-between items-center w-full px-6 md:px-10 py-4">
       <div className="flex items-center gap-6">
+      <MobileMenuButton s={s} active="editions" />
       <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>
