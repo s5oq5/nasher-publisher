@@ -40,11 +40,11 @@ export default function Shop() {
       <a className="flex items-center" href="/"><img src="/nasher-logo.png" alt="ناشر" className="h-12 w-auto rounded-md" /></a>
       </div>
       <div className="flex items-center gap-6">
-      <MobileMenuButton s={s} active="store" />
-      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>
       </button>
+      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
+      <MobileMenuButton s={s} active="store" />
       </div>
       <div className="hidden md:flex flex-row-reverse items-center gap-8">
       <a className="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps text-base" href="/shop">{s.navStore}</a>

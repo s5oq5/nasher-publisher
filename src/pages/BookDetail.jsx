@@ -69,11 +69,11 @@ export default function BookDetail() {
       <nav className="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm relative">
       <div className="flex flex-row-reverse justify-between items-center w-full px-6 md:px-10 py-4">
       <div className="flex items-center gap-6">
-      <MobileMenuButton s={s} active="editions" />
-      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>
       </button>
+      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
+      <MobileMenuButton s={s} active="editions" />
       <button className="p-2 hover:bg-surface-container-low rounded-full transition-all">
       <span className="material-symbols-outlined text-primary">shopping_bag</span>
       </button>

@@ -86,11 +86,11 @@ export default function About() {
       <div className="flex flex-row-reverse justify-between items-center w-full px-6 md:px-10 py-4">
       <a className="flex items-center order-last" href="/"><img src="/nasher-logo.png" alt="ناشر" className="h-12 w-auto rounded-md" /></a>
       <div className="flex items-center gap-6">
-      <MobileMenuButton s={s} active="about" />
-      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
       <button className="text-on-surface-variant hover:text-primary transition-all">
       <span className="material-symbols-outlined">search</span>
       </button>
+      <button onClick={toggleLang} className="text-on-surface-variant font-label-caps text-label-caps hover:text-primary">{lang === "ar" ? "English" : "العربية"}</button>
+      <MobileMenuButton s={s} active="about" />
       </div>
       <div className="hidden md:flex flex-row-reverse gap-gutter items-center">
       <a className="font-label-caps text-base font-semibold text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="/shop">{s.navStore}</a>
